@@ -23,16 +23,17 @@
             <div id="main">
 
                 <!-- One -->
-                    <section id="one">
-                        <header class="major">
-                            <h2>A BIT ABOUT ME<br />
-                            </h2>
-                        </header>
-                        <p>Hello! I am an IT major from the Philippines, specialized in Information Security. My interests include Data Analytics, Data Engineering and other Tech stuff!</p>
-                        <ul class="actions">
-                            
-                        </ul>
-                    </section>
+		<section id="one">
+		  <header class="major">
+		    <h2>A BIT ABOUT ME<br /></h2>
+		  </header>
+		  <p>
+		    Hello! I am an IT major from the Philippines, specialized in Information Security. My interests include Data Analytics, Data Engineering, and other Tech stuff!  
+		    I am also proud to be a recipient of the <a href="https://dataengineering.ph/about.html" target="_blank" style="text-decoration: underline; color: #007bff;">DEP DataCamp Scholarship for Learners</a>.  
+		    You can also check out my <a href="https://www.datacamp.com/portfolio/nathaniellumilay" target="_blank" style="text-decoration: underline; color: #007bff;">DataCamp profile here</a>.
+		  </p>
+		  <ul class="actions"></ul>
+		</section>
 
                 <!-- Two -->
                     <section id="two">
@@ -78,14 +79,14 @@
 	  <div class="inner">
 	    <ul class="icons">
 	      <li>
-	        <a
-	          href="javascript:void(0)"
-	          class="icon solid fa-envelope"
+	        <span
+	          id="email"
 	          onclick="copyEmailToClipboard()"
+	          style="cursor: pointer; text-decoration: underline; color: #007bff;"
 	          title="Click to copy email"
 	        >
-	          <span class="label">Email</span>
-	        </a>
+	          placeholder@gmail.com
+	        </span>
 	      </li>
 	    </ul>
 	    <p id="email-feedback" style="display: none; color: green; margin-top: 10px;">Email copied to clipboard!</p>
@@ -94,7 +95,7 @@
 	
 	<script>
 	  function copyEmailToClipboard() {
-	    const email = "nathaniel.lumilay@gmail.com";
+	    const email = document.getElementById("email").innerText;
 	    navigator.clipboard.writeText(email).then(() => {
 	      const feedback = document.getElementById("email-feedback");
 	      feedback.style.display = "block";
